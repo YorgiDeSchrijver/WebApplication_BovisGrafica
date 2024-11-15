@@ -1,9 +1,3 @@
-/**
- * This is intended to be a basic starting point for linting in your app.
- * It relies on recommended configs out of the box for simplicity, but you can
- * and should modify this configuration to best suit your team's needs.
- */
-
 /** @type {import('eslint').Linter.Config} */
 module.exports = {
   root: true,
@@ -19,7 +13,6 @@ module.exports = {
     commonjs: true,
     es6: true,
   },
-  ignorePatterns: ["!**/.server", "!**/.client"],
 
   // Base config
   extends: ["eslint:recommended"],
@@ -34,6 +27,7 @@ module.exports = {
         "plugin:react/jsx-runtime",
         "plugin:react-hooks/recommended",
         "plugin:jsx-a11y/recommended",
+        "plugin:prettier/recommended",
       ],
       settings: {
         react: {
@@ -44,9 +38,12 @@ module.exports = {
           { name: "Link", linkAttribute: "to" },
           { name: "NavLink", linkAttribute: "to" },
         ],
-        "import/resolver": {
-          typescript: {},
-        },
+      },
+      rules: {
+        "react/jsx-no-leaked-render": [
+          "warn",
+          { validStrategies: ["ternary"] },
+        ],
       },
     },
 
@@ -68,14 +65,26 @@ module.exports = {
       },
       extends: [
         "plugin:@typescript-eslint/recommended",
+        "plugin:@typescript-eslint/stylistic",
         "plugin:import/recommended",
         "plugin:import/typescript",
+        "plugin:prettier/recommended",
       ],
+      rules: {
+        "import/order": [
+          "error",
+          {
+            alphabetize: { caseInsensitive: true, order: "asc" },
+            groups: ["builtin", "external", "internal", "parent", "sibling"],
+            "newlines-between": "always",
+          },
+        ],
+      },
     },
 
     // Node
     {
-      files: [".eslintrc.cjs"],
+      files: [".eslintrc.js", "mocks/**/*.js"],
       env: {
         node: true,
       },
