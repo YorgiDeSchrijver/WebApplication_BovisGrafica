@@ -1,10 +1,28 @@
-import * as React from "react"
-import { Sidebar, SidebarContent, SidebarFooter, SidebarGroup, SidebarGroupContent, SidebarGroupLabel, SidebarHeader, SidebarMenu, SidebarMenuButton, SidebarMenuItem, SidebarMenuSub, SidebarMenuSub, SidebarMenuSubButton, SidebarMenuSubItem, SidebarSeparator } from "./ui/sidebar"
-import { ArrowDown, Book, Calculator, ChevronDown, ChevronRight, Cog, Command, Contact, Gift, HandCoins, MessageCircle, ShoppingCart, Users } from "lucide-react";
 import { Link } from "@remix-run/react";
-import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "./ui/collapsible";
+import {
+  Book,
+  Calculator,
+  Cog,
+  Command,
+  Contact,
+  Gift,
+  HandCoins,
+  MessageCircle,
+} from "lucide-react";
+import * as React from "react";
 
-// This is sample data.
+import {
+  Sidebar,
+  SidebarContent,
+  SidebarFooter,
+  SidebarGroup,
+  SidebarGroupContent,
+  SidebarHeader,
+  SidebarMenu,
+  SidebarMenuButton,
+  SidebarMenuItem,
+  SidebarSeparator,
+} from "./ui/sidebar";
 
 export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
   return (
@@ -13,7 +31,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
         <SidebarMenu>
           <SidebarMenuItem>
             <SidebarMenuButton size="lg" asChild>
-              <div className="flex flex-row gap-3 items-center justify-center">
+              <div className="flex flex-row items-center justify-center gap-3">
                 <div className="flex aspect-square size-10 items-center justify-center rounded-lg bg-sidebar-primary text-sidebar-primary-foreground">
                   <Command className="size-4" />
                 </div>
