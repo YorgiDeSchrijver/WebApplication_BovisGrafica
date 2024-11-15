@@ -52,7 +52,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
               <SidebarMenuItem>
                 <SidebarMenuButton asChild>
                   <Link to="#">
-                    <Contact strokeWidth={2.5} />
+                    <Contact strokeWidth={2} />
                     Praesidium
                   </Link>
                 </SidebarMenuButton>
@@ -60,7 +60,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
               <SidebarMenuItem>
                 <SidebarMenuButton asChild>
                   <Link to="#">
-                    <HandCoins strokeWidth={2.5} />
+                    <HandCoins strokeWidth={2} />
                     Sponsors
                   </Link>
                 </SidebarMenuButton>
@@ -75,7 +75,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
               <SidebarMenuItem>
                 <SidebarMenuButton asChild>
                   <Link to="#">
-                    <Calculator strokeWidth={2.5} />
+                    <Calculator strokeWidth={2} />
                     Boekhouding
                   </Link>
                 </SidebarMenuButton>
@@ -83,7 +83,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
               <SidebarMenuItem>
                 <SidebarMenuButton asChild>
                   <Link to="#">
-                    <Cog strokeWidth={2.5} />
+                    <Cog strokeWidth={2} />
                     Instellingen
                   </Link>
                 </SidebarMenuButton>
@@ -98,7 +98,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
           <SidebarMenuItem>
             <SidebarMenuButton asChild>
               <Link to="#">
-                <Gift strokeWidth={2.5} />
+                <Gift strokeWidth={2} />
                 Wat is er nieuw?
               </Link>
             </SidebarMenuButton>
@@ -106,7 +106,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
           <SidebarMenuItem>
             <SidebarMenuButton asChild>
               <Link to="#">
-                <Book strokeWidth={2.5} />
+                <Book strokeWidth={2} />
                 Documentatie
               </Link>
             </SidebarMenuButton>
@@ -114,7 +114,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
           <SidebarMenuItem>
             <SidebarMenuButton asChild>
               <Link to="#">
-                <MessageCircle strokeWidth={2.5} />
+                <MessageCircle strokeWidth={2} />
                 Feedback
               </Link>
             </SidebarMenuButton>
