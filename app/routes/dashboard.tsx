@@ -1,6 +1,6 @@
 import { Outlet } from "@remix-run/react";
 
-import { AppSidebar } from "~/components/app-sidebar";
+import { AppSidebar } from "~/components/app/sidebar";
 import {
   Breadcrumb,
   BreadcrumbList,

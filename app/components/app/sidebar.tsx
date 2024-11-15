@@ -22,7 +22,8 @@ import {
   SidebarMenuButton,
   SidebarMenuItem,
   SidebarSeparator,
-} from "./ui/sidebar";
+} from "../ui/sidebar";
+import { SidebarUser } from "./sidebar-user";
 
 export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
   return (
@@ -32,8 +33,12 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
           <SidebarMenuItem>
             <SidebarMenuButton size="lg" asChild>
               <div className="flex flex-row items-center justify-center gap-3">
-                <div className="flex aspect-square size-10 items-center justify-center rounded-lg bg-sidebar-primary text-sidebar-primary-foreground">
-                  <Command className="size-4" />
+                <div className="flex aspect-square size-10 items-center justify-center rounded-lg bg-sidebar-primary p-1.5 text-sidebar-primary-foreground">
+                  <img
+                    src="/dashboard_logo.png"
+                    alt=""
+                    className="h-full w-full object-contain"
+                  />
                 </div>
                 <div className="grid flex-1 text-left text-base leading-tight">
                   <span className="truncate font-semibold">Bovis-Grafica</span>
@@ -119,6 +124,14 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
               </Link>
             </SidebarMenuButton>
           </SidebarMenuItem>
+          <SidebarSeparator />
+          <SidebarUser
+            user={{
+              name: "Yorgi De Schrijver",
+              email: "privateyorgi@gmail.com",
+              avatar: "/user.jpg",
+            }}
+          />
         </SidebarMenu>
       </SidebarFooter>
     </Sidebar>
